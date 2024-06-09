@@ -10,5 +10,23 @@
     else: 
         print("Hello Friend!")
     </code>
+
 </pre>
+</br></br>
+<form method=POST action="{% url 'home' %}">
+    {%  csrf_token %}
+    <div class="mb-3">
+        <textarea class="form-control" name="code" placeholder="Have AI fix my code." rows="3"></textarea>
+    </div>
+    <div class="mb-4">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>   
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
 {% endblock %}
